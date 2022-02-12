@@ -1,0 +1,5 @@
+standard_file_name:
+  "annotations_coco": "_annotations.coco.json"
+  "annotations_createml": "_annotations.createml.json"
+  "annotations_tfcsv": "tensorflow.csv"
+  "annotations_yolodarknet": "_darknet.labels"
