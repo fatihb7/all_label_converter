@@ -34,7 +34,7 @@ def get_requirements(file_name):
 # Define setup parameters.
 setuptools.setup(
     name="all_label_converter",
-    version="0.1.2",
+    version="0.1.3",
     author="Fatih Baday",
     author_email="bfatih27@gmail.com",
     description="To convert image labels between each other.",
