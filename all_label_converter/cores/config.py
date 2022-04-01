@@ -6,8 +6,10 @@ Purpose: As class is called, it reads the config file and transfers it to the cl
 import os
 import yaml
 
-# Constant variables.
-CONFIG_FILE_PATH = os.path.join(os.getcwd(), "config.yaml")
+from pathlib import Path
+
+# Get path of current file for set config path.
+CONFIG_FILE_PATH = os.path.join(Path(__file__).parent.parent, "config.yaml")
 
 
 class Config:

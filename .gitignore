@@ -3,6 +3,7 @@ build/
 dist/
 all_label_converter/data/
 all_label_converter/output/
-all_label_converter/for_test.py
+all_label_converter/test
 all_label_converter.egg-info
 **/__pycache__/
+MANIFEST.in

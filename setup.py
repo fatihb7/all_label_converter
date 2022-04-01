@@ -31,17 +31,59 @@ def get_requirements(file_name):
         return f.read().splitlines()
 
 
+def get_packages():
+    """
+    Purpose: Get packages list.
+    Author: Fatih Baday
+    :return: packages_list
+    """
+    packages_list = setuptools.find_packages()
+    return packages_list
+
+
+def get_data_files():
+    """
+    Purpose: Get data files.
+    Author: Fatih Baday
+    :return: data_files
+    """
+
+    data_files = {
+        "all_label_converter": ["config.yaml"]
+    }
+
+    return data_files
+
+
+def get_exclude_files():
+    """
+    Purpose: Get exclude files list.
+    Author: Fatih Baday
+    :return: exclude_files
+    """
+    exclude_files = {
+        "all_label_converter": ["for_test.py"]
+    }
+    return exclude_files
+
+
 # Define setup parameters.
 setuptools.setup(
     name="all_label_converter",
-    version="0.1.3",
+    version="0.1.7",
     author="Fatih Baday",
     author_email="bfatih27@gmail.com",
     description="To convert image labels between each other.",
     long_description=get_longdescription(LONGDESC_FILE_NAME),
     long_description_content_type="text/markdown",
     url="https://github.com/fatihb7/all_label_converter",
-    packages=setuptools.find_packages(),
+    packages=get_packages(),
+    package_dir={
+        "": ".",
+        "cores": "./all_label_converter/cores"
+    },
+    package_data=get_data_files(),
+    exclude_package_data=get_exclude_files(),
     classifiers=[
         "Programming Language :: Python :: 3"],
     python_requires='>=3.6.0',
